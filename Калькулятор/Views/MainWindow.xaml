@@ -1,0 +1,136 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Калькулятор"
+        xmlns:vm="clr-namespace:Калькулятор.ViewModels"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Калькулятор.MainWindow"
+
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="300" MinHeight="450" MinWidth="300">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <Border
+            Grid.Row="0"
+            Style="{StaticResource Border}">
+
+            <TextBox
+                Text="{Binding Path=Display}"
+                MaxLength="9"
+                Style="{StaticResource Disp}"/>
+            
+        </Border>
+
+        <UniformGrid
+            Grid.Row="1"
+            Rows="6"
+            Columns="4">
+
+            <Button Command="{Binding Path=PresCosCommand}"
+                    Content="cos"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresSinCommand}"
+                    Content="sin"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresTanCommand}"
+                    Content="tan"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresResetCommand}"
+                    Content="C"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresSqrtCommand}"
+                    Content="√x"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresPow2Command}"
+                    Content="x²"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresReverseCommand}"
+                    Content="1/x"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresDivisCommand}"
+                    Content="÷"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=Pres1Command}"
+                    Content="1"
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=Pres2Command}"
+                    Content="2" 
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=Pres3Command}"
+                    Content="3" 
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=PresMultipCommand}"
+                    Content="x"
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=Pres4Command}"
+                    Content="4"                     
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=Pres5Command}"
+                    Content="5"
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=Pres6Command}"
+                    Content="6" 
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=PresPlusCommand}"
+                    Content="+" 
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=Pres7Command}"
+                    Content="7" 
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=Pres8Command}"
+                    Content="8" 
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=Pres9Command}"
+                    Content="9" 
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=PresMinusCommand}"
+                    Content="-" 
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresInversionCommand}"
+                    Content="±" 
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=Pres0Command}"
+                    Content="0"
+                    Style="{StaticResource ButtonNum}"/>
+
+            <Button Command="{Binding Path=PresDotCommand}"
+                    Content=","
+                    Style="{StaticResource ButtonOp}"/>
+
+            <Button Command="{Binding Path=PresGetTotalCommand}"
+                    Content="=" 
+                    Style="{StaticResource ButtonEq}"/>
+
+        </UniformGrid>
+    </Grid>
+</Window>
