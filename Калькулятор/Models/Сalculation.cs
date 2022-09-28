@@ -9,35 +9,15 @@ namespace Калькулятор.Models
 {
     class Сalculation
     {
-        //Entering numbers
+        //Entering numbers and dot
         public static string GetStringAfterInputNumb(string stringBefore, int numberAdd) => stringBefore + Convert.ToString(numberAdd);
 
-        public static string GetStringAfterInputDot(string stringBefore) => stringBefore + ',';
+        public static string GetStringAfterInputDot(string stringBefore)
+        {
+            return stringBefore.Contains(",") == false? stringBefore + ',' : stringBefore;
+        }
 
         //Arithmetic operations
-        public static void Subtraction(string stringDisp, out double numbTemp, out string typeOperation)
-        {
-            numbTemp = Convert.ToDouble(stringDisp);
-            typeOperation = "-";
-        }
-
-        public static void Аddition(string stringDisp, out double numbTemp, out string typeOperation)
-        {
-            numbTemp = Convert.ToDouble(stringDisp);
-            typeOperation = "+";
-        }
-
-        public static void Multiplication(string stringDisp, out double numbTemp, out string typeOperation)
-        {
-            numbTemp = Convert.ToDouble(stringDisp);
-            typeOperation = "*";
-        }
-
-        public static void Division(string stringDisp, out double numbTemp, out string typeOperation)
-        {
-            numbTemp = Convert.ToDouble(stringDisp);
-            typeOperation = "/";
-        }
 
         public static string Inversion(string stringBefore) => Convert.ToString(0 - Convert.ToDouble(stringBefore));
 

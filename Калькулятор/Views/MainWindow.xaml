@@ -25,7 +25,6 @@
 
             <TextBox
                 Text="{Binding Path=Display}"
-                MaxLength="9"
                 Style="{StaticResource Disp}"/>
             
         </Border>
@@ -35,15 +34,18 @@
             Rows="6"
             Columns="4">
 
-            <Button Command="{Binding Path=PresCosCommand}"
+            <Button Command="{Binding Path=PresOneOperandCommand}"   
+                    CommandParameter="cos"
                     Content="cos"
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=PresSinCommand}"
+            <Button Command="{Binding Path=PresOneOperandCommand}"
+                    CommandParameter="sin"
                     Content="sin"
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=PresTanCommand}"
+            <Button Command="{Binding Path=PresOneOperandCommand}"
+                    CommandParameter="tan"
                     Content="tan"
                     Style="{StaticResource ButtonOp}"/>
 
@@ -51,75 +53,93 @@
                     Content="C"
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=PresSqrtCommand}"
+            <Button Command="{Binding Path=PresOneOperandCommand}"
+                    CommandParameter="sqrt"
                     Content="√x"
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=PresPow2Command}"
+            <Button Command="{Binding Path=PresOneOperandCommand}"
+                    CommandParameter="pow2"
                     Content="x²"
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=PresReverseCommand}"
+            <Button Command="{Binding Path=PresOneOperandCommand}"
+                    CommandParameter="rev"
                     Content="1/x"
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=PresDivisCommand}"
+            <Button Command="{Binding Path=PresTwoOperandCommand}"
+                    CommandParameter="/"
                     Content="÷"
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=Pres1Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="1"
                     Content="1"
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=Pres2Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="2"
                     Content="2" 
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=Pres3Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="3"
                     Content="3" 
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=PresMultipCommand}"
+            <Button Command="{Binding Path=PresTwoOperandCommand}"
+                    CommandParameter="*"
                     Content="x"
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=Pres4Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="4"
                     Content="4"                     
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=Pres5Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="5"
                     Content="5"
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=Pres6Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="6"
                     Content="6" 
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=PresPlusCommand}"
+            <Button Command="{Binding Path=PresTwoOperandCommand}"
+                    CommandParameter="+"
                     Content="+" 
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=Pres7Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="7"
                     Content="7" 
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=Pres8Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="8"
                     Content="8" 
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=Pres9Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="9"
                     Content="9" 
                     Style="{StaticResource ButtonNum}"/>
 
-            <Button Command="{Binding Path=PresMinusCommand}"
+            <Button Command="{Binding Path=PresTwoOperandCommand}"
+                    CommandParameter="-"
                     Content="-" 
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=PresInversionCommand}"
+            <Button Command="{Binding Path=PresOneOperandCommand}"
+                    CommandParameter="inv"
                     Content="±" 
                     Style="{StaticResource ButtonOp}"/>
 
-            <Button Command="{Binding Path=Pres0Command}"
+            <Button Command="{Binding Path=PresNumbCommand}"
+                    CommandParameter="0"
                     Content="0"
                     Style="{StaticResource ButtonNum}"/>
 

@@ -28,7 +28,6 @@ namespace Калькулятор
             ResourceDictionary themeDictionary = Application.LoadComponent(theme) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Add(themeDictionary);
 
-
             InitializeComponent();
 
         }
